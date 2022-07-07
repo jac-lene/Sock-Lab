@@ -1,0 +1,42 @@
+BACKEND PLAN
+
+What are my MVP goals?
+    - an image of a sock that can be clicked and change color
+    - a pattern that changes based on the user input
+    - a visual library that stores all of my saved designs
+
+What are my stretch goals? 
+    - Mark pattern as complete, in progress, upload photos of finished sock
+    - user auth
+    - yarn store map
+    - more than one type of garment/pattern
+
+How to accomplish each part: 
+
+Sock Image
+    - need to establish model
+    - need to establish form
+    - figure out link to frontend 
+    - allow editable information from the SAVE button ie name
+
+Create Route
+    - "Visible" form element for user info
+    - Write pattern with form inputs/default values
+    - Figure out how to save image/generate image
+    - When saving allow user to input name, default value
+
+Show Route 
+    - Pattern library with saved images
+        - Show name and Image
+    - Detail page with pattern and visual information
+        - all info and display pattern
+
+Update Route
+    - Opens up from detail page
+    - User is taken to the generate page and able to change style/color etc
+    - new pattern is saved
+
+Delete Route
+    - In Detail Page user is able to delete.
+    - Are you sure?
+    
