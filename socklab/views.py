@@ -1,7 +1,17 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import BasicSock
-
+from .forms import SockForm
 # Create your views here.
+
+def sock_create(request):
+    if request.method == 'POST':
+        form = SockForm(request.POST)
+        if form.is_valid():
+            sock = form.save()
+            return redirect('sock_detail', pk=sock.pk)
+    else:
+        form = SockForm()
+    return render(request, 'sock-lab/sock_form.html', {'form': form})
 
 def sock_list(request):
     socks = BasicSock.objects.all()
