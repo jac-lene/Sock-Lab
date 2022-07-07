@@ -8,9 +8,20 @@ def sock_create(request):
         form = SockForm(request.POST)
         if form.is_valid():
             sock = form.save()
-            return redirect('sock_detail', pk=sock.pk)
+            return redirect('design-library/sock_detail', pk=sock.pk)
     else:
         form = SockForm()
+    return render(request, 'sock-lab/sock_form.html', {'form': form})
+
+def sock_edit(request, pk):
+    sock = BasicSock.objects.get(pk=pk)
+    if request.method == "POST":
+        form = SockForm(request.POST, instance=sock)
+        if form.is_valid():
+            sock = form.save()
+            return redirect('sock_detail', pk=sock.pk)
+    else:
+        form = SockForm(instance=sock)
     return render(request, 'sock-lab/sock_form.html', {'form': form})
 
 def sock_list(request):

@@ -1,4 +1,4 @@
-<h2>{{ sock.name }} <a href="">(edit)</a></h2>
+<h2>{{ sock.name }} <a href="{% url 'sock_edit' pk=sock.pk %}">(edit)</a></h2>
 <h4>{{ sock.CC1 }}</h4>
 <h4>{{ sock.ankle_height }}</h4>
 <h4>{{ sock.foot_length }}</h4>
