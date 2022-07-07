@@ -24,6 +24,11 @@ def sock_edit(request, pk):
         form = SockForm(instance=sock)
     return render(request, 'sock-lab/sock_form.html', {'form': form})
 
+def sock_delete(request, pk):
+    BasicSock.objects.get(id=pk).delete()
+    return redirect('sock_list')
+
+
 def sock_list(request):
     socks = BasicSock.objects.all()
     return render(request, 'design-library/socks.html', {'socks': socks})
