@@ -11,9 +11,9 @@ class BasicSock(models.Model):
     CC3 = models.CharField(max_length=100, default = 'red', blank=True)
     ankle_height = models.CharField(max_length=100, default = 'crew')
     foot_length = models.CharField(max_length=100, default = '9.5')
-    foot_stripe = models.BooleanField
-    in_progress = models.BooleanField
-    completed = models.BooleanField
+    foot_stripe = models.BooleanField(default=False)
+    in_progress = models.BooleanField(default=False)
+    completed = models.BooleanField(default=False)
     user_photo = models.TextField(blank=True)
 
     def __str__(self):
