@@ -7,6 +7,10 @@ class SockSerializer(serializers.HyperlinkedModelSerializer):
     #     many=True,
     #     read_only=True
     # )
+    sock_url = serializers.ModelSerializer.serializer_url_field(
+        view_name='sock_detail'
+    )
+
     class Meta:
         model = BasicSock
-        fields = ('id', 'name', 'CC1', 'CC2', 'CC3', 'ankle_height', 'foot_length','foot_stripe','in_progress','completed')
+        fields = ('id', 'sock_url', 'name', 'CC1', 'CC2', 'CC3', 'ankle_height', 'foot_length','foot_stripe','in_progress','completed')
