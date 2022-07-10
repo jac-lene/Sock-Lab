@@ -14,7 +14,7 @@ class BasicSock(models.Model):
     foot_stripe = models.BooleanField(default=False)
     in_progress = models.BooleanField(default=False)
     completed = models.BooleanField(default=False)
-    user_photo = models.TextField(blank=True)
+    user_photo = models.TextField(default = 'upload photo here')
 
     def __str__(self):
         return self.name
