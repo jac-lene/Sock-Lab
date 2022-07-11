@@ -14,10 +14,12 @@ What are my stretch goals?
 How to accomplish each part: 
 
 Sock Image
-    - need to establish model
-    - need to establish form
-    - figure out link to frontend 
+    - alter model to work best for use
     - allow editable information from the SAVE button ie name
+    DONE
+        - need to establish model
+        - need to establish form  
+        - figure out link to frontend 
 
 Create Route
     - "Visible" form element for user info
