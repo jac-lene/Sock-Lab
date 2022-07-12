@@ -1,6 +1,7 @@
 from statistics import mode
 from xmlrpc.client import boolean
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 
@@ -18,6 +19,7 @@ class BasicSock(models.Model):
     in_progress = models.BooleanField(default=False)
     completed = models.BooleanField(default=False)
     user_photo = models.TextField(blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return self.name
