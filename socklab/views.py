@@ -1,3 +1,12 @@
-from django.shortcuts import render
+from rest_framework import generics, permissions
+from .serializers import SockSerializer
+from .models import BasicSock
 
-# Create your views here.
+class SockList(generics.ListCreateAPIView):
+    permission_classes = (permissions.AllowAny,)
+    queryset = BasicSock.objects.all()
+    serializer_class = SockSerializer
+
+class SockDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = BasicSock.objects.all()
+    serializer_class = SockSerializer

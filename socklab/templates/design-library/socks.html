@@ -1,0 +1,8 @@
+<h2>Socks <a href="{% url 'sock_create' %}">(+)</a></h2>
+<ul>
+  {% for sock in socks %}
+  <li>
+    <a href="{% url 'sock_detail' pk=sock.pk %}">{{ sock.name }}</a>
+  </li>
+  {% endfor %}
+</ul>
