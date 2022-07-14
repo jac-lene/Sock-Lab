@@ -13,4 +13,4 @@ class SockSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = BasicSock
-        fields = ('id', 'sock_url', 'name', 'toeColor','ankleColor', 'heelColor', 'footColor', 'ribColor','ankle_height', 'foot_length','foot_stripe','in_progress','completed','user_photo')
+        fields = ('id', 'sock_url', 'name', 'toeColor','ankleColor', 'heelColor', 'footColor', 'ribColor','foot_stripe','in_progress','completed','knitStatus','user_photo')

@@ -13,11 +13,10 @@ class BasicSock(models.Model):
     heelColor = models.CharField(max_length=100, default = 'white', blank=True)
     footColor = models.CharField(max_length=100, default = 'white', blank=True)
     ribColor = models.CharField(max_length=100, default = 'white', blank=True)
-    ankle_height = models.CharField(max_length=100, default = 'crew')
-    foot_length = models.CharField(max_length=100, default = '9.5')
     foot_stripe = models.BooleanField(default=False)
     in_progress = models.BooleanField(default=False)
     completed = models.BooleanField(default=False)
+    knitStatus = models.CharField(max_length=100, blank=True)
     user_photo = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
