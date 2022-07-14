@@ -16,7 +16,7 @@ class BasicSock(models.Model):
     foot_stripe = models.BooleanField(default=False)
     in_progress = models.BooleanField(default=False)
     completed = models.BooleanField(default=False)
-    knitStatus = models.CharField(max_length=100, blank=True)
+    knitStatus = models.CharField(max_length=100, default='', blank=True)
     user_photo = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
