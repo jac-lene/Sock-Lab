@@ -29,4 +29,4 @@ class StashSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Stash
-        fields = ('brand','stash_url','colorName','colorCode','yardage','grams','nickname','description')
+        fields = ('id','stash_url','brand','colorName','colorCode','yardage','grams','nickname','description')

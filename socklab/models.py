@@ -25,7 +25,7 @@ class BasicSock(models.Model):
 
 class Stash(models.Model):
     brand = models.CharField(max_length=400, default='Brand', blank=True)
-    colorName = models.CharField(max_length=400, default='white')
+    colorName = models.CharField(max_length=400, default='white', blank=True)
     colorCode = models.CharField(max_length=100, default='#fff')
     yardage = models.CharField(max_length=100, blank=True)
     grams = models.CharField(max_length=100, blank=True)
