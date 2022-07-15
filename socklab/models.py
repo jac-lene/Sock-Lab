@@ -22,3 +22,15 @@ class BasicSock(models.Model):
 
     def __str__(self):
         return self.name
+
+class Stash(models.Model):
+    brand = models.CharField(max_length=400, default='Brand', blank=True)
+    colorName = models.CharField(max_length=400, default='white')
+    colorCode = models.CharField(max_length=100, default='#fff')
+    yardage = models.CharField(max_length=100, blank=True)
+    grams = models.CharField(max_length=100, blank=True)
+    nickname = models.CharField(max_length=400, blank=True)
+    description = models.TextField(blank=True)
+
+    def __str__(self):
+        return self.colorName

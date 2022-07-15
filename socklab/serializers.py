@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from .models import BasicSock
+from .models import Stash
 
 class SockSerializer(serializers.HyperlinkedModelSerializer):
     # songs = serializers.HyperlinkedRelatedField(
@@ -14,3 +15,18 @@ class SockSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = BasicSock
         fields = ('id', 'sock_url', 'name', 'toeColor','ankleColor', 'heelColor', 'footColor', 'ribColor','foot_stripe','in_progress','completed','knitStatus','user_photo')
+
+
+class StashSerializer(serializers.HyperlinkedModelSerializer):
+    # songs = serializers.HyperlinkedRelatedField(
+    #     view_name='song_detail',
+    #     many=True,
+    #     read_only=True
+    # )
+    stash_url = serializers.ModelSerializer.serializer_url_field(
+        view_name='stash_detail'
+    )
+
+    class Meta:
+        model = Stash
+        fields = ('brand','stash_url','colorName','colorCode','yardage','grams','nickname','description')
