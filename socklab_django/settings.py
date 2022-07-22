@@ -54,6 +54,7 @@ REST_FRAMEWORK = {
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://localhost:8000",
+    "https://socklab.netlify.app",
 ]
 
 MIDDLEWARE = [
@@ -143,3 +144,8 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Configure Django App for Heroku
+
+import django_heroku 
+django_heroku.settings(locals())
