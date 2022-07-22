@@ -51,12 +51,12 @@ REST_FRAMEWORK = {
     ]
 }
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-    "http://localhost:8000",
-    "https://socklab.netlify.app",
-    "https://socklab.herokuapp.com",
-    "*"
+CORS_ALLOW_ALL_ORIGINS = [
+    # "http://localhost:3000",
+    # "http://localhost:8000",
+    # "https://socklab.netlify.app",
+    # "https://socklab.herokuapp.com",
+    # "*",
 ]
 
 MIDDLEWARE = [
