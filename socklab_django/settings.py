@@ -51,7 +51,7 @@ REST_FRAMEWORK = {
     ]
 }
 
-CORS_ALLOW_ALL_ORIGINS = True
+CORS_ORIGIN_ALLOW_ALL = True
 # [
 #     # "http://localhost:3000",
 #     # "http://localhost:8000",
