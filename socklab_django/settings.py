@@ -43,7 +43,6 @@ INSTALLED_APPS = [
     'socklab',
     'rest_framework',
     'corsheaders',
-    'gunicorn',
 ]
 
 REST_FRAMEWORK = {
