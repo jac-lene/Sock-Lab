@@ -24,9 +24,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-=tog$g9n3l$h3tx=+p&=3-2v!5pg0z!4v_fk!o4bb3k+*ogqp_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "https://git.heroku.com/socklab.git",
+]
 
 
 # Application definition
@@ -41,6 +43,7 @@ INSTALLED_APPS = [
     'socklab',
     'rest_framework',
     'corsheaders',
+    'gunicorn',
 ]
 
 REST_FRAMEWORK = {
