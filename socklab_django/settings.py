@@ -104,7 +104,8 @@ DATABASES = {
         'NAME': 'socklab',
         'USER': 'slabuser',
         'PASSWORD': 'slab',
-        'HOST': 'localhost'
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
