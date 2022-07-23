@@ -105,7 +105,6 @@ DATABASES = {
         'USER': 'slabuser',
         'PASSWORD': 'slab',
         'HOST': 'localhost',
-        'PORT': '5432',
     }
 }
 
