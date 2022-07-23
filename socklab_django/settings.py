@@ -28,6 +28,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     "https://git.heroku.com/socklab.git",
+    "https://socklab.netlify.app/",
 ]
 
 
@@ -53,14 +54,12 @@ REST_FRAMEWORK = {
     ]
 }
 
-CORS_ORIGIN_ALLOW_ALL = True
-# [
-#     # "http://localhost:3000",
-#     # "http://localhost:8000",
-#     # "https://socklab.netlify.app",
-#     # "https://socklab.herokuapp.com",
-#     # "*",
-# ]
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    "http://localhost:8000",
+    "https://socklab.netlify.app",
+    "https://socklab.herokuapp.com",
+]
 
 MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
