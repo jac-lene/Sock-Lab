@@ -1,5 +1,3 @@
-from statistics import mode
-from xmlrpc.client import boolean
 from django.db import models
 from django.contrib.auth.models import User
 

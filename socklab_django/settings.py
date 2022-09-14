@@ -27,10 +27,8 @@ SECRET_KEY = 'django-insecure-=tog$g9n3l$h3tx=+p&=3-2v!5pg0z!4v_fk!o4bb3k+*ogqp_
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    "https://git.heroku.com/socklab.git",
-    "https://socklab.netlify.app/",
+    "*",
 ]
-
 
 # Application definition
 
@@ -55,10 +53,9 @@ REST_FRAMEWORK = {
 }
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3001",
+    "http://localhost:3000",
     "http://localhost:8000",
-    "https://socklab.netlify.app",
-    "https://socklab.herokuapp.com",
+    "http://localhost:5432",
 ]
 
 MIDDLEWARE = [
@@ -106,7 +103,6 @@ DATABASES = {
         'HOST': 'localhost',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
