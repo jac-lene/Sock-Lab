@@ -11,6 +11,9 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+import os 
+
+
 
 # Builds paths inside the project like this: BASE_DIR / 'subdir'.
 
@@ -56,6 +59,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://localhost:8000",
     "http://localhost:5432",
+    "http://localhost:80",
 ]
 
 MIDDLEWARE = [
@@ -94,13 +98,24 @@ WSGI_APPLICATION = 'socklab_django.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+# DATABASES = {
+#    'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'socklab',
+#         'USER': 'slabuser',
+#         'PASSWORD': 'slab',
+#         'HOST': 'localhost',
+#     }
+# }
+
 DATABASES = {
    'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'socklab',
-        'USER': 'slabuser',
-        'PASSWORD': 'slab',
-        'HOST': 'localhost',
+        'NAME': os.environ.get('DATABASE'),
+        'USER': os.environ.get('USER'),
+        'PASSWORD': os.environ.get('PASSWORD'),
+        'HOST': os.environ.get('HOST'),
+        # 'PORT': os.environ['PORT']
     }
 }
 
