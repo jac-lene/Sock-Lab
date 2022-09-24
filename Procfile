@@ -1,1 +1,1 @@
-web: gunicorn socklab.wsgi
+web: python3 manage.py runserver
