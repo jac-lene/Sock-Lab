@@ -1,1 +1,1 @@
-web: gunicorn socklab.wsgi
+web: gunicorn socklab_django/socklab.wsgi
